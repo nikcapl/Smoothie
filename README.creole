@@ -1,3 +1,24 @@
+An attempt to Port Smoothie to ATSAM3X8E (in particular Arduino Due)
+
+I'm Publishing this in the hopes that others will join in on this project
+
+First Hurdle:
+Smoothie seems to use mbed, there is no mbed for ATSAM3X8E
+
+Status: 
+Added mbed/src/vendor/ATMEL/cmsis/ATSAM3X8E, seems correct. From asf-3.12.1 
+Added mbed/src/vendor/ATMEL/capi/ATSAM3X8E, this is basicly a empty shell.
+added mbed/src/mbed-atsam3x8e.mk, this is just a guess, needs checking.
+eddited mbed/src/Makefile to include mbed-atsam3x8e.mk 
+
+mbed for ATSAM3X8E compiles and links. But Since all file in capi are basicaly empty it will not run. Maybe enough to start exploring the next hurdle while these files are filled out.
+
+Second Hurdle:
+Port Smoothie code
+
+Status: Not started
+  
+
 ==Overview
 Smoothie is a free, opensource, high performance G-code interpreter and CNC controller written in Object-Oriented C++ for the LPC17xx micro-controller ( ARM Cortex M3 architecture ). It will run on a mBed, a LPCXpresso, a SmoothieBoard, R2C2 or any other LPC17xx-based board. The motion control part is a port of the awesome grbl.
 
